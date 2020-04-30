@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 import {Data} from './data'
 
@@ -10,7 +11,7 @@ import {Data} from './data'
 
 export class DataService {
 
-  private REST_API_SERVER = "http://localhost:8000/util";
+  private REST_API_SERVER = environment.apiUrl + "/util";
 
   constructor(private httpClient: HttpClient) { }
 
